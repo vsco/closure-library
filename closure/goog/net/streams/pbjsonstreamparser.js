@@ -36,7 +36,7 @@ goog.module('goog.net.streams.PbJsonStreamParser');
 
 var JsonStreamParser = goog.require('goog.net.streams.JsonStreamParser');
 var StreamParser = goog.require('goog.net.streams.StreamParser');
-var asserts = goog.require('goog.asserts');
+var PbJsonStreamParser_asserts = goog.require('goog.asserts');
 var utils = goog.require('goog.net.streams.utils');
 
 
@@ -116,7 +116,7 @@ PbJsonStreamParser.prototype.getErrorMessage = function() {
 
 /** @override */
 PbJsonStreamParser.prototype.parse = function(input) {
-  asserts.assertString(input);
+  PbJsonStreamParser_asserts.assertString(input);
 
   var parser = this;
   var pos = 0;

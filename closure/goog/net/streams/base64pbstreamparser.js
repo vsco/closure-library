@@ -25,7 +25,7 @@ goog.module('goog.net.streams.Base64PbStreamParser');
 var Base64StreamDecoder = goog.require('goog.net.streams.Base64StreamDecoder');
 var PbStreamParser = goog.require('goog.net.streams.PbStreamParser');
 var StreamParser = goog.require('goog.net.streams.StreamParser');
-var asserts = goog.require('goog.asserts');
+var Base64PbStreamParser_asserts = goog.require('goog.asserts');
 
 
 /**
@@ -90,7 +90,7 @@ Base64PbStreamParser.prototype.error_ = function(input, errorMsg) {
 
 /** @override */
 Base64PbStreamParser.prototype.parse = function(input) {
-  asserts.assertString(input);
+  Base64PbStreamParser_asserts.assertString(input);
 
   if (this.errorMessage_ !== null) {
     this.error_(input, 'stream already broken');
